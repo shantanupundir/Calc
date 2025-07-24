@@ -40,7 +40,7 @@
             android:textColor="@color/displayText"
             android:textSize="48sp"
             android:textStyle="bold"
-            android:text="0"
+            android:text="@string/_0"
             android:maxLines="1"
             android:layout_marginTop="8dp"/>
 
@@ -70,28 +70,28 @@
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="C"
+                android:text="@string/c"
                 android:background="@drawable/button_clear_background"/>
 
             <Button android:id="@+id/btnBackspace"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="⌫"
+                android:text="@string/back"
                 android:background="@drawable/button_operator_background"/>
 
             <Button android:id="@+id/btnPercentage"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="%"
+                android:text="@string/per"
                 android:background="@drawable/button_operator_background"/>
 
             <Button android:id="@+id/btnDivide"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="÷"
+                android:text="@string/div"
                 android:background="@drawable/button_operator_background"/>
 
 
@@ -101,28 +101,28 @@
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="7"
+                android:text="@string/_7"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btn8"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="8"
+                android:text="@string/_8"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btn9"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="9"
+                android:text="@string/_9"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btnMultiply"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="x"
+                android:text="@string/x"
                 android:background="@drawable/button_operator_background"/>
 
 
@@ -132,28 +132,28 @@
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="4"
+                android:text="@string/_4"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btn5"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="5"
+                android:text="@string/_5"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btn6"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="6"
+                android:text="@string/_6"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btnSubtraction"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="-"
+                android:text="@string/sub"
                 android:background="@drawable/button_operator_background"/>
 
 
@@ -162,28 +162,28 @@
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="1"
+                android:text="@string/_1"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btn2"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="2"
+                android:text="@string/_2"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btn3"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="3"
+                android:text="@string/_3"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btnAddition"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="+"
+                android:text="@string/add"
                 android:background="@drawable/button_operator_background"/>
 
 
@@ -195,21 +195,21 @@
                 android:layout_columnSpan="2"
                 android:layout_columnWeight="1"
                 android:background="@drawable/button_background"
-                android:text="0" />
+                android:text="@string/_00" />
 
 
             <Button android:id="@+id/btnDot"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="."
+                android:text="@string/dot"
                 android:background="@drawable/button_background"/>
 
             <Button android:id="@+id/btnEquals"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:text="="
+                android:text="@string/equal"
                 android:background="@drawable/button_equal_background"/>
 
         </GridLayout>

@@ -11,8 +11,6 @@ import com.example.mycalc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var resultTextView: TextView
-    private lateinit var previousCalculationTextView: TextView
 
     private var firstNumber = 0.0
     private var operation = ""
@@ -53,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun calculateResult(){
         try {
-            val secondNumber: Double = resultTextView.text.toString().toDouble()
+            val secondNumber: Double = binding.resultTextView.text.toString().toDouble()
             val result: Double = when (operation){
                 "+" -> firstNumber + secondNumber
                 "-" -> firstNumber - secondNumber
@@ -61,38 +59,38 @@ class MainActivity : AppCompatActivity() {
                 "÷" -> firstNumber / secondNumber
                 else -> secondNumber
             }
-            previousCalculationTextView.text="$firstNumber $operation $secondNumber ="
-            resultTextView.text=result.toString()
+            binding.previousCalculationTextView.text="$firstNumber $operation $secondNumber ="
+            binding.resultTextView.text=result.toString()
             isNewOperation=true
 
         }catch (e: Exception){
-            resultTextView.text="Error"
+            binding.resultTextView.text="Error"
         }
     }
     private fun appendNumber(number:String){
         if(isNewOperation){
-            resultTextView.text=number
+            binding.resultTextView.text=number
             isNewOperation = false
         }else{
-            resultTextView.text="${resultTextView.text}$number"
+            binding.resultTextView.append(number)
         }
     }
     private fun setOperation(operator:String){
-        firstNumber = resultTextView.text.toString().toDouble()
+        firstNumber = binding.resultTextView.text.toString().toDouble()
         operation = operator
         isNewOperation = true
-        previousCalculationTextView.text="$firstNumber $operation"
+        binding.previousCalculationTextView.text="$firstNumber $operation"
     }
     private fun clearCalculator(){
         firstNumber = 0.0
-        previousCalculationTextView.text=""
-        resultTextView.text ="0.0"
+        binding.previousCalculationTextView.text=""
+        binding.resultTextView.text ="0.0"
         operation=""
         isNewOperation=true
     }
     private fun deleteNum() {
-        if (resultTextView.text.isNotEmpty() && resultTextView.text != "0.0" && resultTextView.text != "Error"){
-            resultTextView.text=resultTextView.text.dropLast(1)
+        if (binding.resultTextView.text.isNotEmpty() && binding.resultTextView.text != "0.0" && binding.resultTextView.text != "Error"){
+            binding.resultTextView.text=binding.resultTextView.text.dropLast(1)
         }else{
             Toast.makeText(this,"Invalid Operation",Toast.LENGTH_SHORT).show()
         }
